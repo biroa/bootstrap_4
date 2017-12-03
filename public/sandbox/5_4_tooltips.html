@@ -135,34 +135,37 @@
 
       $(function () {
 
+
+          var hello = $('#hello');
+
           $('[data-toggle="tooltip"]').tooltip();
 
           $('#showTooltip').on('click',function () {
-              $('#hello').tooltip('show');
+              hello.tooltip('show');
           });
 
           $('#hideTooltip').on('click',function () {
-              $('#hello').tooltip('hide');
+              hello.tooltip('hide');
           });
 
           $('#toggleTooltip').on('click',function () {
-              $('#hello').tooltip('toggle');
+              hello.tooltip('toggle');
           });
-          
+
           // tooltip Events
-          $('#hello').on('show.bs.tooltip', function () {
+          hello.on('show.bs.tooltip', function () {
               console.log('Toolip Show');
           });
 
-          $('#hello').on('shown.bs.tooltip', function () {
+          hello.on('shown.bs.tooltip', function () {
               console.log('Toolip is shown');
           });
 
-          $('#hello').on('hide.bs.tooltip', function () {
+          hello.on('hide.bs.tooltip', function () {
               console.log('Toolip hide');
           });
 
-          $('#hello').on('hidden.bs.tooltip', function () {
+          hello.on('hidden.bs.tooltip', function () {
               console.log('Toolip is hidden');
           });
       })
